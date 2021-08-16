@@ -6,7 +6,9 @@ services:
   - docker
 
 before_install:
-  - docker build -t thomas2400/reactapp -f Dockerfile . #. refer to current directory
+  - docker build -t thomas2400/reactapp -f Dockerfile . 
+#. refer to current directory
 
 script:
   - docker run thomas2400/reactapp npm run test -- --coverage
+  - echo "Hello world"
